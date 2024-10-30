@@ -115,7 +115,93 @@
             <label><input type="radio" name="adaptacao" value="7.5"> Ótimo</label>
         </div>
 
-        <!-- Continue adicionando perguntas até a 20ª pergunta com a mesma estrutura -->
+        <div class="question">
+            <p>9. O colaborador é produtivo e eficiente?</p>
+            <label><input type="radio" name="produtividade" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="produtividade" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="produtividade" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="produtividade" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>10. O colaborador possui ética profissional?</p>
+            <label><input type="radio" name="etica" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="etica" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="etica" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="etica" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>11. O colaborador respeita normas e políticas da empresa?</p>
+            <label><input type="radio" name="normas" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="normas" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="normas" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="normas" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>12. O colaborador lida bem com pressão e prazos apertados?</p>
+            <label><input type="radio" name="pressao" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="pressao" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="pressao" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="pressao" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>13. O colaborador é proativo na identificação de problemas?</p>
+            <label><input type="radio" name="proatividade" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="proatividade" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="proatividade" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="proatividade" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>14. O colaborador participa ativamente de reuniões?</p>
+            <label><input type="radio" name="reunioes" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="reunioes" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="reunioes" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="reunioes" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>15. O colaborador estabelece relacionamentos de trabalho positivos?</p>
+            <label><input type="radio" name="relacionamentos" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="relacionamentos" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="relacionamentos" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="relacionamentos" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>16. O colaborador busca soluções inovadoras?</p>
+            <label><input type="radio" name="inovacao" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="inovacao" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="inovacao" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="inovacao" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>17. O colaborador tem habilidades de liderança?</p>
+            <label><input type="radio" name="lideranca" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="lideranca" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="lideranca" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="lideranca" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>18. O colaborador prioriza as tarefas de maneira eficaz?</p>
+            <label><input type="radio" name="priorizacao" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="priorizacao" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="priorizacao" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="priorizacao" value="7.5"> Ótimo</label>
+        </div>
+
+        <div class="question">
+            <p>19. O colaborador demonstra compromisso com a qualidade?</p>
+            <label><input type="radio" name="qualidade" value="0"> Péssimo</label><br>
+            <label><input type="radio" name="qualidade" value="2.5"> Ruim</label><br>
+            <label><input type="radio" name="qualidade" value="5.0"> Bom</label><br>
+            <label><input type="radio" name="qualidade" value="7.5"> Ótimo</label>
+        </div>
 
         <div class="question">
             <p>20. O colaborador é ético e transparente em suas ações?</p>
@@ -139,34 +225,30 @@
             const respostas = document.querySelectorAll('input[type="radio"]:checked');
             let dicas = "";
             
-            // Soma pontuações e avalia as respostas
             respostas.forEach(resposta => {
                 pontuacaoTotal += parseFloat(resposta.value);
-                
-                // Adiciona dicas conforme o desempenho
-                if (resposta.value == "0") {
-                    dicas += "<p>- Áreas de atenção: Foque em melhorar habilidades de comunicação e resolução de problemas.</p>";
-                } else if (resposta.value == "2.5") {
-                    dicas += "<p>- Pontos para aprimorar: Busque mais organização e planejamento no trabalho.</p>";
-                } else if (resposta.value == "5.0") {
-                    dicas += "<p>- Bom progresso! Continue aprimorando para alcançar um desempenho ótimo.</p>";
-                }
             });
 
-            // Calcula a pontuação final
+            // Converter a pontuação total para uma escala de 0 a 100
+            const pontuacaoFinal = (pontuacaoTotal / 150) * 100;
+
+            // Definir classificação e dicas
             let classificacao;
-            if (pontuacaoTotal >= 150) {
+            if (pontuacaoFinal >= 80) {
                 classificacao = "Ótimo";
-            } else if (pontuacaoTotal >= 100) {
+            } else if (pontuacaoFinal >= 60) {
                 classificacao = "Bom";
-            } else if (pontuacaoTotal >= 50) {
+                dicas = "<p>- Continue aprimorando suas habilidades para alcançar um nível ótimo.</p>";
+            } else if (pontuacaoFinal >= 40) {
                 classificacao = "Ruim";
+                dicas = "<p>- Foco em organização e proatividade para melhorar seu desempenho.</p><p>- Considere desenvolver habilidades de comunicação e trabalho em equipe.</p>";
             } else {
                 classificacao = "Péssimo";
+                dicas = "<p>- Concentre-se em fortalecer as habilidades fundamentais.</p><p>- Defina metas claras para melhorar o cumprimento de prazos e trabalho em equipe.</p><p>- Trabalhe na gestão de tempo e resposta a feedback.</p>";
             }
 
-            // Exibe o resultado
-            document.getElementById('resultado').innerText = `Pontuação Final: ${pontuacaoTotal.toFixed(2)}/150 - ${classificacao}`;
+            // Exibir o resultado
+            document.getElementById('resultado').innerText = `Pontuação Final: ${pontuacaoFinal.toFixed(2)}/100 - ${classificacao}`;
             document.getElementById('dicas').innerHTML = dicas;
         }
     </script>
