@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação 360° - Metodologia de Administração</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+        .result {
+            font-size: 1.5em;
+            color: #0056b3;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Avaliação 360° - Metodologia de Administração</h2>
+    <form id="avaliacaoForm">
+        <!-- Perguntas -->
+        <div class="question">
+            <p>1. Em relação à qualidade do trabalho realizado, como você avalia o colaborador?</p>
+            <label><input type="radio" name="qualidade" value="5"> Excelente</label><br>
+            <label><input type="radio" name="qualidade" value="4"> Bom</label><br>
+            <label><input type="radio" name="qualidade" value="3"> Regular</label><br>
+            <label><input type="radio" name="qualidade" value="2"> Precisa Melhorar</label>
+        </div>
+
+        <div class="question">
+            <p>2. Como você classifica a capacidade do colaborador de cumprir prazos?</p>
+            <label><input type="radio" name="prazos" value="5"> Excelente</label><br>
+            <label><input type="radio" name="prazos" value="4"> Bom</label><br>
+            <label><input type="radio" name="prazos" value="3"> Regular</label><br>
+            <label><input type="radio" name="prazos" value="2"> Precisa Melhorar</label>
+        </div>
+
+        <div class="question">
+            <p>3. O colaborador demonstra conhecimento técnico adequado para sua função?</p>
+            <label><input type="radio" name="conhecimento" value="5"> Sempre</label><br>
+            <label><input type="radio" name="conhecimento" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="conhecimento" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="conhecimento" value="2"> Raramente</label>
+        </div>
+
+        <div class="question">
+            <p>4. Como você avalia a capacidade de comunicação do colaborador?</p>
+            <label><input type="radio" name="comunicacao" value="5"> Excelente</label><br>
+            <label><input type="radio" name="comunicacao" value="4"> Bom</label><br>
+            <label><input type="radio" name="comunicacao" value="3"> Regular</label><br>
+            <label><input type="radio" name="comunicacao" value="2"> Precisa Melhorar</label>
+        </div>
+
+        <div class="question">
+            <p>5. O colaborador trabalha bem em equipe?</p>
+            <label><input type="radio" name="equipe" value="5"> Sempre</label><br>
+            <label><input type="radio" name="equipe" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="equipe" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="equipe" value="2"> Raramente</label>
+        </div>
+
+        <div class="question">
+            <p>6. Como você avalia a habilidade do colaborador em resolver conflitos?</p>
+            <label><input type="radio" name="conflitos" value="5"> Excelente</label><br>
+            <label><input type="radio" name="conflitos" value="4"> Bom</label><br>
+            <label><input type="radio" name="conflitos" value="3"> Regular</label><br>
+            <label><input type="radio" name="conflitos" value="2"> Precisa Melhorar</label>
+        </div>
+
+        <div class="question">
+            <p>7. O colaborador é proativo ao tomar decisões e assumir responsabilidades?</p>
+            <label><input type="radio" name="proatividade" value="5"> Sempre</label><br>
+            <label><input type="radio" name="proatividade" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="proatividade" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="proatividade" value="2"> Raramente</label>
+        </div>
+
+        <div class="question">
+            <p>8. O colaborador demonstra capacidade de adaptação a novas situações?</p>
+            <label><input type="radio" name="adaptacao" value="5"> Sempre</label><br>
+            <label><input type="radio" name="adaptacao" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="adaptacao" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="adaptacao" value="2"> Raramente</label>
+        </div>
+
+        <div class="question">
+            <p>9. O colaborador cumpre com as políticas e procedimentos da organização?</p>
+            <label><input type="radio" name="politicas" value="5"> Sempre</label><br>
+            <label><input type="radio" name="politicas" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="politicas" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="politicas" value="2"> Raramente</label>
+        </div>
+
+        <div class="question">
+            <p>10. O colaborador contribui para a melhoria contínua dos processos no seu setor?</p>
+            <label><input type="radio" name="melhoria" value="5"> Sempre</label><br>
+            <label><input type="radio" name="melhoria" value="4"> Frequentemente</label><br>
+            <label><input type="radio" name="melhoria" value="3"> Às vezes</label><br>
+            <label><input type="radio" name="melhoria" value="2"> Raramente</label>
+        </div>
+
+        <!-- Botão de Envio -->
+        <button type="button" onclick="calcularPontuacao()">Enviar Avaliação</button>
+    </form>
+
+    <!-- Resultado -->
+    <h3>Pontuação Total: <span id="pontuacaoTotal" class="result">0</span></h3>
+
+    <!-- Script para calcular a pontuação -->
+    <script>
+        function calcularPontuacao() {
+            let pontuacaoTotal = 0;
+            const form = document.getElementById("avaliacaoForm");
+
+            // Seleciona todas as respostas marcadas e soma os valores
+            const perguntas = ["qualidade", "prazos", "conhecimento", "comunicacao", "equipe", "conflitos", "proatividade", "adaptacao", "politicas", "melhoria"];
+            
+            perguntas.forEach(pergunta => {
+                const resposta = form.querySelector(`input[name="${pergunta}"]:checked`);
+                if (resposta) pontuacaoTotal += parseInt(resposta.value);
+            });
+
+            // Exibir a pontuação total
+            document.getElementById("pontuacaoTotal").innerText = pontuacaoTotal;
+        }
+    </script>
+</body>
+</html>
